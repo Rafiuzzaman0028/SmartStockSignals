@@ -40,25 +40,5 @@ XGBoost
 
 LSTM (for sequential modeling)
 
-Example:
-
-Signal generation logic (can be replaced with ML model)
-
-df['Signal'] = 0
-
-df.loc[df['SMA_10'] > df['SMA_50'], 'Signal'] = 1
-
-df.loc[df['SMA_10'] < df['SMA_50'], 'Signal'] = -1
-
-📈 Backtest Visualization
-The strategy is backtested by comparing predicted signals vs market returns.
-
-python
-
-strategy_returns = returns[1:] * y_pred_final[:-1]
-
-cumulative_strategy = (1 + strategy_returns).cumprod()
-
-cumulative_market = (1 + returns[1:]).cumprod()
 
 
